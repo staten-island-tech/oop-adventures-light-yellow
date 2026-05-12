@@ -39,25 +39,27 @@ Classmates = [
 ]
 
 import random
-truelove=False
+inputRN = 0
+truelove=0
 random_classmates = random.choice(Classmates)
-print(random_classmates["name"])
-while truelove == False:
+while truelove == 0:
     print ("you encountered",random_classmates['name'], "in the hallway")
     inputRN = input('say 1:hi or 2:ignore')
-    if inputRN == 1:
+    if inputRN =='1':
         print ("Hiii~ im",random_classmates["name"],"[insert text and stuff]")
-        input ("1:*Malicously frame mog*",random_classmates["name"],",2: say 'my exp bar is low (๑/////๑')'","3:*talk about deepwoken lore*,4: *give chocoloate*")
+        inputRN = input("1:*Malicously frame mog*,2: say 'my exp bar is low (๑/////๑')',3:*talk about deepwoken lore*,4: *give chocoloate*")
         if inputRN ==1:
-            prezs.affection_down
+            prezs.affection_down(random_classmates["name"])
         elif inputRN == 2:
-            prezs.affection_up
+            prezs.affection_up(random_classmates["name"])
         elif inputRN == 3:
-            prezs.affection_Cdown
+            prezs.affection_Cdown(random_classmates["name"])
         elif inputRN == 4:
-            prezs.affection_Cup
+            prezs.affection_Cup(random_classmates["name"])
         else:
             print ("you lowkirkuinely have a stroke and",random_classmates["name"],"walks away" )
+    elif inputRN =='2':
+        print ("you passed",random_classmates["name"])
     else:
-        print ("you pass",random_classmates["name"])
-
+        print ("error")
+    random_classmates = random.choice(Classmates)
