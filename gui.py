@@ -16,7 +16,7 @@
 
 # root.mainloop()
 
-import tkinter as tk
+# import tkinter as tk
 
 # Create the window
 # root = tk.Tk()
@@ -42,27 +42,22 @@ import tkinter as tk
 
 # # Start the GUI loop
 # root.mainloop()
-
 import tkinter as tk
 
+# Create window
 root = tk.Tk()
-root.geometry("300x200")
-
-# Function for button click
-def clicked():
-    print("Image button clicked!")
+root.title("Image Button Example")
 
 # Load image
-image = tk.PhotoImage(file="button-24843_1280.png")
+photo = tk.PhotoImage(file="button.png")
+small_image = photo.subsample(2,2)
+# Function when button is clicked
+def on_click():
+    print("Button clicked!")
 
-# Create button with image
-button = tk.Button(
-    root,
-    image=image,
-    command=clicked,
-    borderwidth=0
-)
-
+# Create image button
+button = tk.Button(root, image=small_image, command=on_click, borderwidth=0)
 button.pack(pady=20)
 
+# Run app
 root.mainloop()
