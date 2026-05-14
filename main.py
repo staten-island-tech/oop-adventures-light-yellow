@@ -18,21 +18,24 @@ class prezs:
     def affection_down(president):
         president.__affection -=10
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, No-ot tha-hat i care hmph" )
-    def affection_Cup(president):
-        president.__affection +=20
-        print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def affection_Cdown(president):
         president.__affection -=20
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
+    def affection_Cup(president):
+        president.__affection +=100
+        print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
         if president.__affection >= 100:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
-                print("you spend the rest of your life with",president.name,"but lowkey like syyukno you keep on cheating ig sonion")
+                print("you spend the rest of your life with",president.name)
+                truelove == True
             elif inputRN == '2':
                 print("hell nah twin i see you as a brother")
                 president.__affection -= 200
+            else: 
+                print ("you lowkey just die brochacho")
                 
 
 
@@ -57,7 +60,7 @@ Classmates = [
 random_classmates = random.choice(Classmates)
 while truelove == False:
     print ("you encountered",random_classmates['name'], "in the hallway")
-    inputRN = input('say 1:hi or 2:ignore')
+    inputRN = input('1:hi or 2:ignore')
     if inputRN =='1':
         print ("Hiii~ im",random_classmates["name"],"[insert text and stuff]")
         inputRN = input("1:*Malicously frame mog*,2: say 'my exp bar is low (๑/////๑')',3:*talk about deepwoken lore*,4: *give chocoloate*")
@@ -77,3 +80,4 @@ while truelove == False:
         print ("error")
     prezs.confession(random_classmates["id"])
     random_classmates = random.choice(Classmates)
+    
