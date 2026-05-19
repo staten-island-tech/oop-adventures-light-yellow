@@ -1,8 +1,6 @@
 import random
 inputRN = 0
-truelove=False
-
-
+truelove = 0
 class prezs:
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
         president.name = name
@@ -30,12 +28,15 @@ class prezs:
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
                 print("you spend the rest of your life with",president.name)
-                truelove == True
+                truelove +=1
             elif inputRN == '2':
                 print("hell nah twin i see you as a brother")
                 president.__affection -= 200
             else: 
                 print ("you lowkey just die brochacho")
+
+
+
                 
 
 
@@ -56,9 +57,8 @@ Classmates = [
 {"id":Jfk,"name":"John F Kennedy","personality":"popular kid","likes":{"joyrides","talking"},"dislikes": {"nerds"},"nicknames":"kenny-chan"},
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":{"baseball"},"dislikes":{"creepy crawlies","algebra"},"nicknames":"teddy bear"}
 ]
-
 random_classmates = random.choice(Classmates)
-while truelove == False:
+while truelove == 0:
     print ("you encountered",random_classmates['name'], "in the hallway")
     inputRN = input('1:hi or 2:ignore')
     if inputRN =='1':
@@ -80,4 +80,5 @@ while truelove == False:
         print ("error")
     prezs.confession(random_classmates["id"])
     random_classmates = random.choice(Classmates)
+
     
