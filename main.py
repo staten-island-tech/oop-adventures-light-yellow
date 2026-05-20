@@ -1,6 +1,6 @@
 import random
 inputRN = 0
-truelove = 0
+end = False
 class prezs:
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
         president.name = name
@@ -10,6 +10,9 @@ class prezs:
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
+    def stats():
+        for Ps in Classmates:
+            print (Ps['name'])
     def affection_up(president):
         president.__affection +=10
         print (president.name,"'s affection for y/n is now",president.__affection,"<3" )
@@ -28,12 +31,14 @@ class prezs:
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
                 print("you spend the rest of your life with",president.name)
-                truelove +=1
+                global end
+                end = True
             elif inputRN == '2':
-                print("hell nah twin i see you as a brother")
                 president.__affection -= 200
+                print("hell nah twin i see you as a brother")
             else: 
                 print ("you lowkey just die brochacho")
+
 
 
 
@@ -58,11 +63,12 @@ Classmates = [
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":{"baseball"},"dislikes":{"creepy crawlies","algebra"},"nicknames":"teddy bear"}
 ]
 random_classmates = random.choice(Classmates)
-while truelove == 0:
+while not end:
     print ("you encountered",random_classmates['name'], "in the hallway")
     inputRN = input('1:hi or 2:ignore')
     if inputRN =='1':
-        print ("Hiii~ im",random_classmates["name"],"[insert text and stuff]")
+        print ("Hiii~ im",random_classmates["name"],"[insert" \
+        " text and stuff]")
         inputRN = input("1:*Malicously frame mog*,2: say 'my exp bar is low (๑/////๑')',3:*talk about deepwoken lore*,4: *give chocoloate*")
         if inputRN =='1':
             prezs.affection_down(random_classmates["id"])
@@ -80,5 +86,6 @@ while truelove == 0:
         print ("error")
     prezs.confession(random_classmates["id"])
     random_classmates = random.choice(Classmates)
+    prezs.stats()
 
     
