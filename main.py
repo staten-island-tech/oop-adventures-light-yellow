@@ -23,7 +23,7 @@ class prezs:
         president.__affection -=20
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
     def affection_Cup(president):
-        president.__affection +=200
+        president.__affection +=20
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
         if president.__affection >= 100:
@@ -40,7 +40,7 @@ class prezs:
                 print ("you lowkey just die brochacho")
 
 
-
+previous_classmates = 0
 
                 
 
@@ -53,6 +53,7 @@ Washington = prezs(5,"George washington",50,"wierd childhood friend",{"quarters"
 Jfk = prezs(6,"John F Kennedy",-30,"popular kid",{"joyrides","talking"}, {"nerds"},"kenny-chan")
 Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy",{"baseball"},{"creepy crawlies","algebra"},"teddy bear")
 
+
 Classmates = [
 {"id":Trump,"name":"Donald trump","personality":"tsundere","likes":{"red caps", "tan spray","big arch"},"dislikes":{"learning"},"nicknames":"Trumpy-kun"},
 {"id":Biden,"name":"Joe biden","personality":"forgetful","likes":{"icecream", "his cildhood blanket 'blanky'"}, "dislikes":{"alarms"}, "nicknames":"sleepy senpai"},
@@ -62,13 +63,24 @@ Classmates = [
 {"id":Jfk,"name":"John F Kennedy","personality":"popular kid","likes":{"joyrides","talking"},"dislikes": {"nerds"},"nicknames":"kenny-chan"},
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":{"baseball"},"dislikes":{"creepy crawlies","algebra"},"nicknames":"teddy bear"}
 ]
+
+randomchoices = [
+'good':
+{"i like your shoes",random_classmates['name'],"-kun"},{"do you want to talk about excuse me sir?"},{"thanks for studying with me twin"}
+'bad':
+'supergood':
+'superbad':
+]
 random_classmates = random.choice(Classmates)
 while not end:
+    random_classmates = random.choice(Classmates)
+    if random_classmates == previous_classmates:
+        while random_classmates == previous_classmates:
+            random_classmates = random.choice(Classmates)
     print ("you encountered",random_classmates['name'], "in the hallway")
     inputRN = input('1:hi or 2:ignore')
     if inputRN =='1':
-        print ("Hiii~ im",random_classmates["name"],"[insert" \
-        " text and stuff]")
+        print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
         inputRN = input("1:*Malicously frame mog*,2: say 'my exp bar is low (๑/////๑')',3:*talk about deepwoken lore*,4: *give chocoloate*")
         if inputRN =='1':
             prezs.affection_down(random_classmates["id"])
@@ -85,7 +97,7 @@ while not end:
     else:
         print ("error")
     prezs.confession(random_classmates["id"])
-    random_classmates = random.choice(Classmates)
+    previous_classmates = random_classmates
     # prezs.stats()
 
     
