@@ -10,9 +10,9 @@ class prezs:
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
-    def stats():
-        for Ps in Classmates:
-            print (Ps['name'])
+    # def stats():
+    #     for Ps in Classmates:
+    #         print (Ps['name'])
     def affection_up(president):
         president.__affection +=10
         print (president.name,"'s affection for y/n is now",president.__affection,"<3" )
@@ -23,7 +23,7 @@ class prezs:
         president.__affection -=20
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
     def affection_Cup(president):
-        president.__affection +=100
+        president.__affection +=200
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
         if president.__affection >= 100:
@@ -86,6 +86,6 @@ while not end:
         print ("error")
     prezs.confession(random_classmates["id"])
     random_classmates = random.choice(Classmates)
-    prezs.stats()
+    # prezs.stats()
 
     
