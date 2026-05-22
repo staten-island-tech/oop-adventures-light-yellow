@@ -55,21 +55,24 @@ Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy",{"baseball"},{"creepy c
 
 
 Classmates = [
-{"id":Trump,"name":"Donald trump","personality":"tsundere","likes":{"red caps", "tan spray","big arch"},"dislikes":{"learning"},"nicknames":"Trumpy-kun"},
-{"id":Biden,"name":"Joe biden","personality":"forgetful","likes":{"icecream", "his cildhood blanket 'blanky'"}, "dislikes":{"alarms"}, "nicknames":"sleepy senpai"},
-{"id":Obama,"name":"Barrack obama","personality":"chill","likes":{"beatboxxing","grillcheese"},"dislikes":{"talking loudly"}, "nicknames":"obama-san"},
-{"id":Lincoln,"name":"Abraham lincoln","personality":"boxing tomboy but also theater kid","likes":{"voting booths","musicals","dupliKate"},"dislikes":{"bullies","mustaches","omni-man"},"nicknames":"abby"},
-{"id":Washington,"name":"George washington","personality":"wierd childhood friend","likes":{"quarters","you <3","BL manga"},"dislikes":{"popcorn","the beatles"},"nicknames":"weirdo"},
-{"id":Jfk,"name":"John F Kennedy","personality":"popular kid","likes":{"joyrides","talking"},"dislikes": {"nerds"},"nicknames":"kenny-chan"},
-{"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":{"baseball"},"dislikes":{"creepy crawlies","algebra"},"nicknames":"teddy bear"}
+{"id":Trump,"name":"Donald trump","personality":"tsundere","likes":"tan spray","dislikes":{"learning"},"nicknames":"Trumpy-kun"},
+{"id":Biden,"name":"Joe biden","personality":"forgetful","likes":"icecream", "dislikes":"alarms", "nicknames":"sleepy senpai"},
+{"id":Obama,"name":"Barrack obama","personality":"chill","likes":"grillcheese","dislikes":"talking loudly", "nicknames":"obama-san"},
+{"id":Lincoln,"name":"Abraham lincoln","personality":"boxing tomboy but also theater kid","likes":"musicals","dislikes":"omni-man","nicknames":"abby"},
+{"id":Washington,"name":"George washington","personality":"wierd childhood friend","likes":"BL manga","dislikes":"the beatles","nicknames":"weirdo"},
+{"id":Jfk,"name":"John F Kennedy","personality":"popular kid","likes":"covertibles","dislikes": "airports","nicknames":"kenny-chan"},
+{"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":"triple T","dislikes":"creepy crawlies","nicknames":"teddy bear"}
 ]
 
 randomchoices = [
 'good':
-{"i like your shoes",random_classmates['name'],"-kun"},{"do you want to talk about excuse me sir?"},{"thanks for studying with me twin"}
+{"i like your shoes",random_classmates['name'],"-kun"},{"do you want to talk about excuse me sir?"},{"thanks for studying with me twin"},
 'bad':
+{"want to talk about deepwoken?"},{"can i get your mom's number"},{"on charlie kirk youre chopped"},
 'supergood':
+{"100 million to isreal?"},{"i think youre awesome",random_classmates['name']},{"i brought your favoritre",random_classmates['likes']},
 'superbad':
+{"i brought your favoritre",random_classmates['dislikes']},{"on blue judas imma slime you out"},{"i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"},
 ]
 random_classmates = random.choice(Classmates)
 while not end:
