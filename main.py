@@ -63,19 +63,19 @@ Classmates = [
 {"id":Jfk,"name":"John F Kennedy","personality":"popular kid","likes":"covertibles","dislikes": "airports","nicknames":"kenny-chan"},
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":"triple T","dislikes":"creepy crawlies","nicknames":"teddy bear"}
 ]
-
-randomchoices = [
-'good':
-{"i like your shoes",random_classmates['name'],"-kun"},{"do you want to talk about excuse me sir?"},{"thanks for studying with me twin"},
-'bad':
-{"want to talk about deepwoken?"},{"can i get your mom's number"},{"on charlie kirk youre chopped"},
-'supergood':
-{"100 million to isreal?"},{"i think youre awesome",random_classmates['name']},{"i brought your favoritre",random_classmates['likes']},
-'superbad':
-{"i brought your favoritre",random_classmates['dislikes']},{"on blue judas imma slime you out"},{"i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"},
-]
 random_classmates = random.choice(Classmates)
+randnmum = random.randint(1,3)
+randomchoices = {
+'good':["i like your shoes y/n-kun","do you want to talk about excuse me sir?","thanks for studying with me twin"],
+'bad':["want to talk about deepwoken?","can i get your mom's number","on charlie kirk youre chopped"],
+'supergood':["100 million to isreal?","i think youre awesome y/n-chan","i brought your favoritre",random_classmates['likes']],
+'superbad':["i brought your favoritre",random_classmates['dislikes'],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"]
+
+}
+
+
 while not end:
+    print (randomchoices['good'])
     random_classmates = random.choice(Classmates)
     if random_classmates == previous_classmates:
         while random_classmates == previous_classmates:
