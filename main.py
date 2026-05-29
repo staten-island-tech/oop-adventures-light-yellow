@@ -10,9 +10,13 @@ class prezs:
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
-    # def stats():
-    #     for Ps in Classmates:
-    #         print (Ps['name'])
+    def stats(president):
+        print("Name:", president.name)
+        print("Affection:", president.__affection)
+        print("Personality:", president.personality)
+        print("Likes:", ", ".join(president.likes))
+        print("Dislikes:", ", ".join(president.dislikes))
+        print("Nickname:", president.nickname)
     def affection_up(president):
         president.__affection +=10
         print (president.name,"'s affection for y/n is now",president.__affection,"<3" )
@@ -38,6 +42,8 @@ class prezs:
                 print("hell nah twin i see you as a brother")
             else: 
                 print ("you lowkey just die brochacho")
+
+
 
 
 previous_classmates = 0
@@ -74,7 +80,7 @@ choosing = []
 day_count = 0
 while not end:
     day_count +=1
-    print
+    print ("day",day_count)
     for encounters in range(3):
         random_classmates = random.choice(Classmates)
         if random_classmates == previous_classmates:
@@ -84,8 +90,8 @@ while not end:
         inputRN = input('1:hi or 2:ignore')
         if inputRN =='1':
             print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
-            for choices in randomchoices:
-                chosen_text = random.choice(randomchoices[choices])
+            for catergories in randomchoices:
+                chosen_text = random.choice(randomchoices[catergories])
                 choosing.append(chosen_text)
             print("\n".join(
                 f"{i}: {item}"
@@ -108,6 +114,16 @@ while not end:
             print ("error")
         prezs.confession(random_classmates["id"])
         previous_classmates = random_classmates
+        choosing.clear()
+    print ("you head home from school and sleep")
+    inputRN = input
+    ("1: go to sleep" \
+     "2: check stats")
+    if inputRN == "2":
+        for ppl in Classmates:
+            ppl["id"].stats()
+
+
 
 
     
