@@ -10,9 +10,9 @@ bg_label.place(relwidth=1, relheight=1)
 # this above code is the background of the game, should be on always
 
 
-textbox = tk.PhotoImage(file="textboxneutral.png")
-textboxplace = tk.Label(root, image=textbox)
-textboxplace.place(relwidth=1, relheight=1)
+# textbox = tk.PhotoImage(file="textboxneutral.png")
+# textboxplace = tk.Label(root, image=textbox)
+# textboxplace.place(relwidth=1, relheight=1)
 
 
 # photo = tk.PhotoImage(file="button.png")
