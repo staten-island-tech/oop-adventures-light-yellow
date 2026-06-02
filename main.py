@@ -11,12 +11,7 @@ class prezs:
         president.dislikes = dislikes
         president.nickname = nickname
     def stats(president):
-        print("Name:", president.name)
-        print("Affection:", president.__affection)
-        print("Personality:", president.personality)
-        print("Likes:", ", ".join(president.likes))
-        print("Dislikes:", ", ".join(president.dislikes))
-        print("Nickname:", president.nickname)
+        print("Name:", president.name,",Affection:", president.__affection,",Personality:", president.personality,",Likes:", president.likes,",Dislikes:", president.dislikes,",Nickname:", president.nickname)
     def affection_up(president):
         president.__affection +=10
         print (president.name,"'s affection for y/n is now",president.__affection,"<3" )
@@ -51,13 +46,13 @@ previous_classmates = 0
                 
 
 
-Trump = prezs(1,"Donald trump",-30,"tsundere",{"red caps", "tan spray","big arch"},{"learning"},"Trumpy-kun")
-Biden = prezs(2,"Joe biden",0 ,"forgetful",{"icecream", "his cildhood blanket 'blanky'"}, {"alarms"}, "sleepy senpai")
-Obama = prezs(3,"Barrack obama",20,"chill",{"beatboxxing","grillcheese"},{"talking loudly"}, "obama-san")
-Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid",{"voting booths","musicals","dupliKate"},{"extortion","mustaches","omni-man"},"abby")
-Washington = prezs(5,"George washington",50,"wierd childhood friend",{"quarters","you <3","BL manga"},{"popcorn","the beatles"},"weirdo")
-Jfk = prezs(6,"John F Kennedy",-30,"popular kid",{"joyrides","talking"}, {"nerds"},"kenny-chan")
-Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy",{"baseball"},{"creepy crawlies","algebra"},"teddy bear")
+Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun")
+Biden = prezs(2,"Joe biden",0 ,"forgetful","icecream", "alarms", "sleepy senpai")
+Obama = prezs(3,"Barrack obama",20,"chill","grillcheese","talking loudly", "obama-san")
+Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","musicals","omni-man","abby")
+Washington = prezs(5,"George washington",50,"wierd childhood friend","BL manga","the beatles","weirdo")
+Jfk = prezs(6,"John F Kennedy",-30,"popular kid","convertible","nerds","kenny-chan")
+Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy crawlies","teddy bear")
 
 
 Classmates = [
@@ -77,6 +72,7 @@ randomchoices = {
 'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"]
 }
 choosing = []
+talkitve =0
 day_count = 0
 while not end:
     day_count +=1
@@ -89,6 +85,7 @@ while not end:
         print ("you encountered",random_classmates['name'], "in the hallway")
         inputRN = input('1:hi or 2:ignore')
         if inputRN =='1':
+            talkitve =+1
             print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
             for catergories in randomchoices:
                 chosen_text = random.choice(randomchoices[catergories])
@@ -115,13 +112,13 @@ while not end:
         prezs.confession(random_classmates["id"])
         previous_classmates = random_classmates
         choosing.clear()
-    print ("you head home from school and sleep")
-    inputRN = input
-    ("1: go to sleep" \
-     "2: check stats")
-    if inputRN == "2":
-        for ppl in Classmates:
-            ppl["id"].stats()
+    if end == False:
+        print ("you head home from school and sleep")
+        inputRN = input("1: go to sleep ,2: check stats")
+        if inputRN == "2":
+            for ppl in Classmates:
+                prezs.stats(ppl["id"])
+            print("youve talked",talkitve,"times in",day_count,"days")
 
 
 
