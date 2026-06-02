@@ -10,14 +10,21 @@ bg_label.place(relwidth=1, relheight=1)
 # this above code is the background of the game, should be on always
 
 
-photo = tk.PhotoImage(file="textboxneutral.png")
+textbox = tk.PhotoImage(file="textboxneutral.png")
+textboxplace = tk.Label(root, image=textbox)
+textboxplace.place(relwidth=1, relheight=1)
 
-def on_click():
-    print("Button clicked!")
+
+# photo = tk.PhotoImage(file="button.png")
+
+# def on_click():
+#     print("Button clicked!")
 
 
-button = tk.Button(root,  command=on_click, borderwidth=0)
-button.place(x=100, y=700)
-button.pack(pady=20)
+# button = tk.Button(root,  command=on_click, borderwidth=0)
+# button.place(x=100, y=700)
+# button.pack(pady=20)
+
+
 variable676767=root.mainloop()
 variable676767()
