@@ -56,7 +56,7 @@ Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy craw
 
 
 Classmates = [
-{"id":Trump,"name":"Donald trump","personality":"tsundere","likes":"tan spray","dislikes":{"learning"},"nicknames":"Trumpy-kun"},
+{"id":Trump,"name":"Donald trump","personality":"tsundere","likes":"tan spray","dislikes":"learning","nicknames":"Trumpy-kun"},
 {"id":Biden,"name":"Joe biden","personality":"forgetful","likes":"icecream", "dislikes":"alarms", "nicknames":"sleepy senpai"},
 {"id":Obama,"name":"Barrack obama","personality":"chill","likes":"grillcheese","dislikes":"talking loudly", "nicknames":"obama-san"},
 {"id":Lincoln,"name":"Abraham lincoln","personality":"boxing tomboy but also theater kid","likes":"musicals","dislikes":"omni-man","nicknames":"abby"},
@@ -65,12 +65,7 @@ Classmates = [
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":"triple T","dislikes":"creepy crawlies","nicknames":"teddy bear"}
 ]
 random_classmates = random.choice(Classmates)
-randomchoices = {
-'good':["i like your shoes y/n-kun","do you want to talk about excuse me sir?","thanks for studying with me twin"],
-'bad':["want to talk about deepwoken?","can i get your mom's number","on charlie kirk youre chopped"],
-'supergood':["100 million to isreal?",["i think youre awesome",random_classmates['name'],"-chan"],["i brought your favoritre",random_classmates['likes']]],
-'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"]
-}
+
 choosing = []
 talkitve =0
 day_count = 0
@@ -85,6 +80,12 @@ while not end:
         print ("you encountered",random_classmates['name'], "in the hallway")
         inputRN = input('1:hi or 2:ignore')
         if inputRN =='1':
+            randomchoices = {
+            'good':["i like your shoes y/n-kun","do you want to talk about excuse me sir?","thanks for studying with me twin"],
+            'bad':["want to talk about deepwoken?","can i get your mom's number","on charlie kirk youre chopped"],
+            'supergood':["100 million to isreal?",["i think youre awesome",random_classmates['name'],"-chan"],["i brought your favoritre",random_classmates['likes']]],
+            'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)"]
+            }
             talkitve =+1
             print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
             for catergories in randomchoices:
@@ -94,6 +95,7 @@ while not end:
                 f"{i}: {item}"
                 for i, item in enumerate(choosing, start=1)
             ))
+
             inputRN = input("what shall you do?")
             if inputRN =='1':
                 prezs.affection_up(random_classmates["id"])
@@ -112,6 +114,7 @@ while not end:
         prezs.confession(random_classmates["id"])
         previous_classmates = random_classmates
         choosing.clear()
+    
     if end == False:
         print ("you head home from school and sleep")
         inputRN = input("1: go to sleep ,2: check stats")
