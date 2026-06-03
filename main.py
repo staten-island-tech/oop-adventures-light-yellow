@@ -22,7 +22,7 @@ class prezs:
         president.__affection -=20
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
     def affection_Cup(president):
-        president.__affection +=20
+        president.__affection +=100
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
         if president.__affection >= 100:
