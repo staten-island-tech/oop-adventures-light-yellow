@@ -2,7 +2,7 @@ import random
 lovers=[]
 inputRN = 0
 end = False
-class prezs:
+class prezs: #3
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
         president.name = name
         president.id =id
