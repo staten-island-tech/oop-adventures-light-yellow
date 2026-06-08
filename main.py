@@ -134,4 +134,3 @@ while not end:
             for ppl in Classmates:
                 prezs.stats(ppl["id"])
             print("youve talked",talkitve,"times in",day_count,"days")
-
