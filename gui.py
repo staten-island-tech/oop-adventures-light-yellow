@@ -30,5 +30,4 @@ jbidekun = tk.Label(root, image=jbiden)
 jbidekun.place(relwidth=1, relheight=1)
 
 
-variable676767=root.mainloop()
-variable676767()
+root.mainloop()
