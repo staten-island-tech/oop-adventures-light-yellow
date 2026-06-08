@@ -25,6 +25,10 @@ bg_label.place(relwidth=1, relheight=1)
 # button.place(x=100, y=700)
 # button.pack(pady=20)
 
+jbiden = tk.PhotoImage(file="960px-Joe_Biden_presidential_portrait.png")
+jbidekun = tk.Label(root, image=jbiden)
+jbidekun.place(relwidth=1, relheight=1)
+
 
 variable676767=root.mainloop()
 variable676767()
