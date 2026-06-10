@@ -2,8 +2,13 @@ import random
 lovers=[]
 inputRN = 0
 end = False
+import tkinter as tk
+import gui
+from gui import show_sprite
+root=tk.Tk()
+
 class prezs: #3
-    def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
+    def __init__(president,id,name,affection,personality,likes,dislikes,nickname, sprite):
         president.name = name
         president.id =id
         president.__affection = affection
@@ -11,6 +16,7 @@ class prezs: #3
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
+        president.sprite = sprite
     def stats(president):
         print("Name:", president.name,",Affection:", president.__affection,",Personality:", president.personality,",Likes:", president.likes,",Dislikes:", president.dislikes,",Nickname:", president.nickname)
     def affection_up(president):
@@ -54,13 +60,13 @@ previous_classmates = 0
 
 
 
-Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun")
-Biden = prezs(2,"Joe biden",0 ,"forgetful","icecream", "alarms", "sleepy senpai")
-Obama = prezs(3,"Barrack obama",20,"chill","grillcheese","talking loudly", "obama-san")
-Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","musicals","omni-man","abby")
-Washington = prezs(5,"George washington",50,"wierd childhood friend","BL manga","the beatles","weirdo")
-Jfk = prezs(6,"John F Kennedy",-30,"popular kid","convertible","nerds","kenny-chan")
-Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy crawlies","teddy bear")
+Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun", "happytrumpsprite.png")
+Biden = prezs(2,"Joe biden",0 ,"forgetful","icecream", "alarms", "sleepy senpai", "bidensprite.png")
+Obama = prezs(3,"Barrack obama",20,"chill","grillcheese","talking loudly", "obama-san", "obamaspriter.png")
+Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","musicals","omni-man","abby", "linclonsprite.png")
+Washington = prezs(5,"George washington",50,"wierd childhood friend","BL manga","the beatles","weirdo", "washingtonsprite.png")
+Jfk = prezs(6,"John F Kennedy",-30,"popular kid","convertible","nerds","kenny-chan", "jfksprite.png")
+Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy crawlies","teddy bear", "teddsprite.png")
 
 
 
@@ -90,6 +96,8 @@ while not end:
                 while random_classmates == previous_classmates:
                     random_classmates = random.choice(Classmates)
             print ("you encountered",random_classmates['name'], "in the hallway")
+            show_sprite(root, random_classmates["sprite"])
+            root.update
             inputRN = input('1:hi or 2:ignore')
             if inputRN =='1':
                 randomchoices = {

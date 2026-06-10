@@ -36,7 +36,7 @@ def show_sprite(filename):
 
     return sprite_label
 
-show_sprite("abecry.png")
+
 
 
 root.mainloop()
