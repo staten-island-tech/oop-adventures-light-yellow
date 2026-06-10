@@ -25,9 +25,18 @@ bg_label.place(relwidth=1, relheight=1)
 # button.place(x=100, y=700)
 # button.pack(pady=20)
 
-jbiden = tk.PhotoImage(file="960px-Joe_Biden_presidential_portrait.png")
-jbidekun = tk.Label(root, image=jbiden)
-jbidekun.place(relwidth=1, relheight=1)
+def show_sprite(filename):
+    sprite = tk.PhotoImage(file=filename)
+
+    sprite = sprite.zoom(2, 2)
+    root.current_sprite = sprite
+
+    sprite_label = tk.Label(root, image=sprite, borderwidth=0)
+    sprite_label.place(relx=0.5, rely=0.5, anchor="center")
+
+    return sprite_label
+
+show_sprite("abecry.png")
 
 
 root.mainloop()
