@@ -27,7 +27,7 @@ class prezs: #3
         president.__affection +=20
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
-        if president.__affection >= 100:
+        if president.__affection >= 20:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
@@ -76,6 +76,10 @@ while not end:
     day_count +=1
     print ("day",day_count)
     if end == False:
+        if len(rejected) >= 3:
+            print ("You walk into school on the", day_count, "day, and everyone lowrkikenuinely ignores you because you have a reputation for leading people on and then rejecting them. Everyon freaking hates you bro you suck.", "SINGLE FOREVER ENDING")
+            end = True
+            break
         for encounters in range(3):
             random_classmates = random.choice(Classmates)
             if random_classmates == previous_classmates:
@@ -121,7 +125,7 @@ while not end:
             previous_classmates = random_classmates
             choosing.clear()
     if end == False:
-        print ("you head home from school and sleep")
+        print ("you head home from school")
         inputRN = input("1: go to sleep ,2: check stats")
         if inputRN == "2":
             for ppl in Classmates:
