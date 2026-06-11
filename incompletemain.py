@@ -1,7 +1,8 @@
 import random
 lovers=[]
-rejected = []
 inputRN = 0
+
+
 end = False
 class prezs: #3
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
@@ -12,6 +13,8 @@ class prezs: #3
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
+
+
     def stats(president):
         print("Name:", president.name,",Affection:", president.__affection,",Personality:", president.personality,",Likes:", president.likes,",Dislikes:", president.dislikes,",Nickname:", president.nickname)
     def affection_up(president):
@@ -21,12 +24,13 @@ class prezs: #3
         president.__affection -=10
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, No-ot tha-hat i care hmph" )
     def affection_Cdown(president):
-        president.__affection -=20
+        president.__affection -=25
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
     def affection_Cup(president):
-        president.__affection +=20
+        president.__affection +=25
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
+        global end
         if president.__affection >= 100:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
@@ -39,12 +43,12 @@ class prezs: #3
                     print ("yandere trump ending😈🔪🩸")
                     end = True
                 else:
-                    print("you spend the rest of your life with",president.name, "HAPPY ENDING!!:D")
+                    print("you spend the rest of your life with",president.name)
+                    print("normal ending")
                     end = True
             elif inputRN == '2':
-                president.__affection -= 200
+                president.__affection -= 50
                 print("hell nah twin i see you as a brother")
-                rejected.append(president.name)
             else:
                 print ("you lowkey just die brochacho")
 
@@ -63,7 +67,7 @@ previous_classmates = 0
 
 
 
-Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun")
+Trump = prezs(1,"Donald trump",-20,"tsundere","tan spray","learning","Trumpy-kun")
 Biden = prezs(2,"Joe biden",0 ,"forgetful","icecream", "alarms", "sleepy senpai")
 Obama = prezs(3,"Barrack obama",20,"chill","grillcheese","talking loudly", "obama-san")
 Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","musicals","omni-man","abby")
@@ -93,17 +97,12 @@ while not end:
     day_count +=1
     print ("day",day_count)
     if end == False:
-        if len(rejected) >= 3:
-            print ("You walk into school on the", day_count, "day, and everyone lowrkikenuinely ignores you because you have a reputation for leading people on and then rejecting them. Everyon freaking hates you bro you suck.", "SINGLE FOREVER ENDING")
-            end = True
-            break
         for encounters in range(3):
             random_classmates = random.choice(Classmates)
             if random_classmates == previous_classmates:
                 while random_classmates == previous_classmates:
                     random_classmates = random.choice(Classmates)
             print ("you encountered",random_classmates['name'], "in the hallway")
-            # classmate appear code here
             inputRN = input('1:hi or 2:ignore')
             if inputRN =='1':
                 randomchoices = {
@@ -112,7 +111,7 @@ while not end:
                 'supergood':["100 million to isreal?",["i think youre awesome",random_classmates['name'],"-chan"],["i brought your favoritre",random_classmates['likes']],["Are you Air Force One",random_classmates["nicknames"],"? Because my heart takes off whenever you're around."]],
                 'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)","67"]
                 }
-                talkitve =+1
+                talkitve +=1
                 print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
                 for catergories in randomchoices:
                     chosen_text = random.choice(randomchoices[catergories])
@@ -142,7 +141,7 @@ while not end:
             previous_classmates = random_classmates
             choosing.clear()
     if end == False:
-        print ("you head home from school")
+        print ("you head home from school and sleep")
         inputRN = input("1: go to sleep ,2: check stats")
         if inputRN == "2":
             for ppl in Classmates:
