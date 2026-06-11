@@ -3,8 +3,6 @@ lovers=[]
 rejected = []
 inputRN = 0
 end = False
-print ("It's your first day at Eville High School. You walk through the doors for the first time, and the first thing you notice is that.. ALL THE STUDENTS ARE U.S PRESIDENTS AND THEY'RE SUPER DUPER KAWAII!!!! Your heart races as you see all the geriatric old men roaming the halls. YOU NEED TO DATE ONE OF THEM!!!")
-print("Donald Trump is a yandere that seems pretty unfriendly at first.. Biden and Teddy Roosevelt seem indifferent towards you, while Obama and Lincoln make an effort to be friendly. Jfk, on the other hand, seems to dislike you at first.. George Washington is your childhood friend that you've known for a long time, so his affection starts out higher. Good luck!!")
 class prezs: #3
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
         president.name = name
@@ -29,12 +27,12 @@ class prezs: #3
         president.__affection +=20
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
-        if president.__affection >= 100:
+        if president.__affection >= 20:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
                 global end
-                if Trump.__affection >= 50:
+                if Trump.__affection >= 10:
                     print ("you accept and hold hands and skip home with",president.name)
                     print ("...")
                     print ("a pair of eyes stares at you from the darkness, as the moonlight fills the room, their silhouette is illuminated... its trump...")
@@ -115,7 +113,7 @@ while not end:
                 'supergood':["100 million to isreal?",["i think youre awesome",random_classmates['name'],"-chan"],["i brought your favoritre",random_classmates['likes']],["Are you Air Force One",random_classmates["nicknames"],"? Because my heart takes off whenever you're around."]],
                 'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)","67"]
                 }
-                talkitve +=1
+                talkitve =+1
                 print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
                 for catergories in randomchoices:
                     chosen_text = random.choice(randomchoices[catergories])
