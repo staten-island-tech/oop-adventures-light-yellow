@@ -27,40 +27,26 @@ class prezs: #3
         president.__affection +=20
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
-        if president.__affection >= 100:
+        if president.__affection >= 20:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
-                if Trump.__affection >= 50:
-                    print ("you accept and hold hands and skip home with",president.name)
-                    print ("...")
-                    print ("a pair of eyes stares at you from the darkness, as the moonlight fills the room, their silhouette is illuminated... its trump...")
-                    print ("he whispers, 'youre mine y/n chan...' and lowkirkenuinely slimes you out")
-                    print ("yandere trump ending😈🔪🩸")
-                    end = True
-                else:
-                    print("you spend the rest of your life with",president.name, "HAPPY ENDING!!:D")
-                    end = True
+                print("you spend the rest of your life with",president.name, "HAPPY ENDING!!:D")
+                global end
+                end = True
             elif inputRN == '2':
                 president.__affection -= 200
                 print("hell nah twin i see you as a brother")
                 rejected.append(president.name)
-            else:
+            else: 
                 print ("you lowkey just die brochacho")
-
-
-
-
 
 
 
 
 previous_classmates = 0
 
-
-               
-
-
+                
 
 
 Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun")
@@ -70,8 +56,6 @@ Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","mus
 Washington = prezs(5,"George washington",50,"wierd childhood friend","BL manga","the beatles","weirdo")
 Jfk = prezs(6,"John F Kennedy",-30,"popular kid","convertible","nerds","kenny-chan")
 Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy crawlies","teddy bear")
-
-
 
 
 Classmates = [
@@ -84,7 +68,6 @@ Classmates = [
 {"id":Teddy,"name":"Theodore Rossevelt","personality":"baseball tomboy","likes":"triple T","dislikes":"creepy crawlies","nicknames":"teddy bear"}
 ]
 random_classmates = random.choice(Classmates)
-
 
 choosing = []
 talkitve =0
