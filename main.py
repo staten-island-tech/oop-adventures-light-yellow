@@ -23,16 +23,26 @@ class prezs: #3
         president.__affection -=20
         print (president.name,"'s affection for y/n is now",president.__affection,"</3, i hope you get hit by a car" )
     def affection_Cup(president):
-        president.__affection +=20
+        president.__affection +=100
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
         if president.__affection >= 100:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
-                print("you spend the rest of your life with",president.name)
-                global end
-                end = True
+                if Trump.__affection >= 50:
+                    print ("you accept and hold hands and skip home with",president.name)
+                    print ("...")
+                    print ("a pair of eyes stares at you from the darkness, as the moonlight fills the room, their silhouette is illuminated... its trump...")
+                    print ("he whispers, 'youre mine y/n chan...' and lowkirkenuinely slimes you out")
+                    print ("yandere trump ending")
+                    global end
+                    end = True
+                else:
+                    print("you spend the rest of your life with",president.name)
+                    print("normal ending")
+                    global end
+                    end = True
             elif inputRN == '2':
                 president.__affection -= 200
                 print("hell nah twin i see you as a brother")
@@ -47,7 +57,7 @@ previous_classmates = 0
                 
 
 
-Trump = prezs(1,"Donald trump",-30,"tsundere","tan spray","learning","Trumpy-kun")
+Trump = prezs(1,"Donald trump",50,"tsundere","tan spray","learning","Trumpy-kun")
 Biden = prezs(2,"Joe biden",0 ,"forgetful","icecream", "alarms", "sleepy senpai")
 Obama = prezs(3,"Barrack obama",20,"chill","grillcheese","talking loudly", "obama-san")
 Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","musicals","omni-man","abby")
@@ -88,7 +98,7 @@ while not end:
                 'supergood':["100 million to isreal?",["i think youre awesome",random_classmates['name'],"-chan"],["i brought your favoritre",random_classmates['likes']],["Are you Air Force One",random_classmates["nicknames"],"? Because my heart takes off whenever you're around."]],
                 'superbad':[["i brought your favoritre",random_classmates['dislikes']],"on blue judas imma slime you out","i-i-i-i th-think-nk i-im-m ii-in lov-ve wi-ith y-y-yo-your dad (⸝⸝¬`‸´ ¬⸝⸝)","67"]
                 }
-                talkitve =+1
+                talkitve +=1
                 print ("Hiii~ im",random_classmates['name'],"[insert text and stuff]")
                 for catergories in randomchoices:
                     chosen_text = random.choice(randomchoices[catergories])
