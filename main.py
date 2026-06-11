@@ -1,6 +1,7 @@
 import random
 lovers=[]
 inputRN = 0
+
 end = False
 class prezs: #3
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
@@ -11,6 +12,7 @@ class prezs: #3
         president.likes = likes
         president.dislikes = dislikes
         president.nickname = nickname
+
     def stats(president):
         print("Name:", president.name,",Affection:", president.__affection,",Personality:", president.personality,",Likes:", president.likes,",Dislikes:", president.dislikes,",Nickname:", president.nickname)
     def affection_up(president):
@@ -26,6 +28,7 @@ class prezs: #3
         president.__affection +=100
         print (president.name,"'s affection for y/n is now",president.__affection,"<3, the system starts blushing" )
     def confession(president):
+        global end
         if president.__affection >= 100:
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
@@ -36,12 +39,10 @@ class prezs: #3
                     print ("a pair of eyes stares at you from the darkness, as the moonlight fills the room, their silhouette is illuminated... its trump...")
                     print ("he whispers, 'youre mine y/n chan...' and lowkirkenuinely slimes you out")
                     print ("yandere trump ending")
-                    global end
                     end = True
                 else:
                     print("you spend the rest of your life with",president.name)
                     print("normal ending")
-                    global end
                     end = True
             elif inputRN == '2':
                 president.__affection -= 200
