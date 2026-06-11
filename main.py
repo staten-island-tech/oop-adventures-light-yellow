@@ -1,5 +1,6 @@
 import random
 lovers=[]
+rejected = []
 inputRN = 0
 end = False
 class prezs: #3
@@ -30,12 +31,20 @@ class prezs: #3
             print (president.name,"'s affection for y/n is now over 100 <3<3<3 and they confess")
             inputRN =input("1: accept or 2:nah")
             if inputRN == '1':
-                print("you spend the rest of your life with",president.name)
-                global end
-                end = True
+                if Trump.__affection >= 50:
+                    print ("you accept and hold hands and skip home with",president.name)
+                    print ("...")
+                    print ("a pair of eyes stares at you from the darkness, as the moonlight fills the room, their silhouette is illuminated... its trump...")
+                    print ("he whispers, 'youre mine y/n chan...' and lowkirkenuinely slimes you out")
+                    print ("yandere trump ending😈🔪🩸")
+                    end = True
+                else:
+                    print("you spend the rest of your life with",president.name, "HAPPY ENDING!!:D")
+                    end = True
             elif inputRN == '2':
                 president.__affection -= 200
                 print("hell nah twin i see you as a brother")
+                rejected.append(president.name)
             else:
                 print ("you lowkey just die brochacho")
 
@@ -84,12 +93,17 @@ while not end:
     day_count +=1
     print ("day",day_count)
     if end == False:
+        if len(rejected) >= 3:
+            print ("You walk into school on the", day_count, "day, and everyone lowrkikenuinely ignores you because you have a reputation for leading people on and then rejecting them. Everyon freaking hates you bro you suck.", "SINGLE FOREVER ENDING")
+            end = True
+            break
         for encounters in range(3):
             random_classmates = random.choice(Classmates)
             if random_classmates == previous_classmates:
                 while random_classmates == previous_classmates:
                     random_classmates = random.choice(Classmates)
             print ("you encountered",random_classmates['name'], "in the hallway")
+            # classmate appear code here
             inputRN = input('1:hi or 2:ignore')
             if inputRN =='1':
                 randomchoices = {
@@ -128,7 +142,7 @@ while not end:
             previous_classmates = random_classmates
             choosing.clear()
     if end == False:
-        print ("you head home from school and sleep")
+        print ("you head home from school")
         inputRN = input("1: go to sleep ,2: check stats")
         if inputRN == "2":
             for ppl in Classmates:
