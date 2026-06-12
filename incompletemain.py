@@ -2,7 +2,6 @@ import random
 lovers=[]
 inputRN = 0
 
-
 end = False
 class prezs: #3
     def __init__(president,id,name,affection,personality,likes,dislikes,nickname):
@@ -74,7 +73,6 @@ Lincoln = prezs(4,"Abraham lincoln",10,"boxing tomboy but also theater kid","mus
 Washington = prezs(5,"George washington",50,"wierd childhood friend","BL manga","the beatles","weirdo")
 Jfk = prezs(6,"John F Kennedy",-30,"popular kid","convertible","nerds","kenny-chan")
 Teddy = prezs(7,"Theodore Rossevelt",0,"baseball tomboy","triple T","creepy crawlies","teddy bear")
-
 
 
 
